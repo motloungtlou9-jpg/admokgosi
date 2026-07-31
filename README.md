@@ -1,0 +1,2 @@
+# admokgosi
+banner 
