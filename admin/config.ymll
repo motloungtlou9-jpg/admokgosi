@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images" 
+public_folder: "/assets/images"
+
+collections:
+    - name: "ad"
+    label: "Advertisement"
+    files:
+            - name: "banner"
+        label: "Banner Ad"
+        file: "data/ad.json"
+        fields:
+                    - {label: "Ad Title", name: "title", widget: "string"}
+                    - {label: "Ad Description", name: "desc", widget: "text"}
+                    - {label: "Ad Image", name: "image", widget: "image", required: false}
+                    - {label: "Button Text", name: "btnText", widget: "string", default: "Shop Now"}
+                    - {label: "Button Link", name: "btnLink", widget: "string"}
+                    - {label: "Background Color", name: "bg", widget: "color", default: "#FBBF24"}
+                    - {label: "Text Color", name: "color", widget: "color", default: "#000"}
