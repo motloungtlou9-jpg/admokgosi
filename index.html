@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOKGOSI SA | Official Website</title>
+  
+  <!-- Bootstrap 5 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --mokgosi-purple: #7C3AED;
+      --mokgosi-gold: #FBBF24;
+      --mokgosi-dark: #0F0F1A;
+      --mokgosi-gray: #1A1A2E;
+    }
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      background: var(--mokgosi-dark);
+      color: #fff;
+    }
+    
+    /* Modern Glass + Gradient */
+    .bg-gradient {
+      background: linear-gradient(135deg, var(--mokgosi-purple), #A855F7, var(--mokgosi-gold));
+    }
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .bg-purple { background-color: var(--mokgosi-purple) !important; }
+    .bg-gold { background-color: var(--mokgosi-gold) !important; }
+    .text-purple { color: var(--mokgosi-purple) !important; }
+    .text-gold { color: var(--mokgosi-gold) !important; }
+
+    .btn-purple { 
+      background: linear-gradient(90deg, var(--mokgosi-purple), #A855F7); 
+      color: #fff; border: none; font-weight: 600;
+    }
+    .btn-purple:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(124,58,237,0.4); color:#fff; }
+    
+    .btn-gold { 
+      background: var(--mokgosi-gold); 
+      color: #000; border: none; font-weight: 700;
+    }
+    .btn-gold:hover { background: #F59E0B; color: #000; transform: translateY(-2px); }
+
+    /* HERO - NO VIDEO, Modern gradient background */
+    .hero {
+      position:relative;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      background: radial-gradient(circle at 20% 50%, rgba(124,58,237,0.2), transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(251,191,36,0.15), transparent 50%),
+                  var(--mokgosi-dark);
+      overflow:hidden;
+      padding-top: 100px;
+    }
+
+    .hero-content {
+        text-align: center;
+        max-width: 700px;
+        margin: auto;
+        padding: 20px;
+    }
+    .hero-content h1 {
+        font-size: clamp(2.5rem, 8vw, 5rem);
+        font-weight: 900;
+        background: linear-gradient(90deg,#fff, var(--mokgosi-gold));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 20px;
+    }
+    .hero-content p {
+        font-size: 1.2rem;
+        color: #CBD5E1;
+        margin-bottom: 30px;
+    }
+    .btn-group { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+
+    .btn-hero {
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-float {
+        position: fixed;
+        right: 20px;
+        bottom: 60px;
+        width: 60px;
+        height: 60px;
+        background: #25D366;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 20px rgba(37,211,102,.4);
+        z-index: 9999;
+        animation: pulse 1.5s infinite;
+    }
+    .whatsapp-float img { width: 34px; height: 34px; }
+    @keyframes pulse { 0% {transform: scale(1);} 50% {transform: scale(1.15);} 100% {transform: scale(1);} }
+    
+    .card { background: var(--mokgosi-gray); border: 1px solid rgba(255,255,255,0.1); }
+    .card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(124, 58, 237, 0.3) !important; transition: all .3s ease; }
+    
+    .navbar { transition: all .3s ease; }
+    .navbar.scrolled { background: rgba(15,15,26,0.8) !important; backdrop-filter: blur(20px); }
+  </style>
+
+</head>
+<body>
+ 
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow" style="background:transparent;">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="#" style="color:var(--mokgosi-gold)">MOKGOSI <span class="text-white">SA</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto fw-semibold">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#music">Music</a></li>
+          <li class="nav-item"><a class="nav-link" href="#videos">Videos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION - NO VIDEO -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>MOKGOSI SA</h1>
+      <p class="lead">Sesotho Hip Hop & Jazz | Cultural Spirit | Lesotho King</p>
+      <div class="btn-group">
+        <a href="#music" class="btn-hero btn-purple">Listen Now</a>
+        <a href="#contact" class="btn-hero btn-gold">Book Me</a>
+      </div>
+    </div>
+  </section>
+<!-- ADVERTISEMENT SECTION - CLIENT EDITABLE -->
+<section id="ads" class="py-4">
+  <div class="container">
+    <div id="ad-banner" class="glass rounded-4 p-3 text-center"></div>
+  </div>
+</section>
+  <!-- MUSIC SECTION -->
+  <section id="music" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold text-gold display-5">Latest Tracks</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        
+        <div class="col">
+          <div class="card h-100 shadow rounded-4">
+            <img src="LIBITLA.PNG" class="card-img-top rounded-top-4 object-fit-cover" style="height:250px" alt="Track 1">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">LIBITLA LA MONNA</h5>
+              <audio id="audio1" src="2.mp3"></audio>
+              <button class="btn btn-purple w-100 mt-3 play-btn" data-audio="audio1">
+                <i class="bi bi-play-fill"></i> Play
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow rounded-4">
+            <img src="QACHA.PNG" class="card-img-top rounded-top-4 object-fit-cover" style="height:250px" alt="Track 2">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">QACHA</h5>
+              <audio id="audio2" src="1.mp3"></audio>
+              <button class="btn btn-purple w-100 mt-3 play-btn" data-audio="audio2">
+                <i class="bi bi-play-fill"></i> Play
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow rounded-4">
+            <img src="MOKGOSI.jpg" class="card-img-top rounded-top-4 object-fit-cover" style="height:250px" alt="Track 3">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">MOKGOSI WA BUSIU</h5>
+              <audio id="audio3" src="3.mp3"></audio>
+              <button class="btn btn-purple w-100 mt-3 play-btn" data-audio="audio3">
+                <i class="bi bi-play-fill"></i> Play
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- YOUTUBE SECTION - FIXED EMBEDS -->
+  <section id="videos" class="py-5" style="background: var(--mokgosi-gray);">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-gold display-5">Official Videos</h2>
+        <p class="text-muted">Watch my latest music videos</p>
+        <a href="https://www.youtube.com/channel/UCDMlcZPVjymYYgSk6hRQy2w" target="_blank" class="btn btn-danger btn-lg">
+          <i class="bi bi-youtube"></i> Subscribe
+        </a>
+      </div>
+
+      <!-- 8 Video Grid -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        
+        <!-- REPLACE VIDEO_ID_HERE WITH YOUR REAL 11 CHARACTER YOUTUBE ID -->
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 rounded-4">
+            <div class="ratio ratio-16x9 rounded-top-4 overflow-hidden">
+              <iframe src="https://www.youtube.com/embed/mXNKcZRz-Q4" title="Video 1" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 rounded-4">
+            <div class="ratio ratio-16x9 rounded-top-4 overflow-hidden">
+              <iframe src="https://www.youtube.com/embed/d33iOtdI0Mg" title="Video 2" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 rounded-4">
+            <div class="ratio ratio-16x9 rounded-top-4 overflow-hidden">
+              <iframe src="https://www.youtube.com/embed/_3E7RUyHUs4" title="Video 3" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 rounded-4">
+            <div class="ratio ratio-16x9 rounded-top-4 overflow-hidden">
+              <iframe src="https://www.youtube.com/embed/RU2zZfNsKjQ" title="Video 4" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 rounded-4">
+            <div class="ratio ratio-16x9 rounded-top-4 overflow-hidden">
+              <iframe src="https://www.youtube.com/embed/2G9e5FY0C7c" title="Video 5" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 rounded-4">
+            <div class="ratio ratio-16x9 rounded-top-4 overflow-hidden">
+              <iframe src="https://www.youtube.com/embed/AKJwwsi3_Gw" title="Video 6" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 rounded-4">
+            <div class="ratio ratio-16x9 rounded-top-4 overflow-hidden">
+              <iframe src="https://www.youtube.com/embed/FvqVt3sihAQ" title="Video 7" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 rounded-4">
+            <div class="ratio ratio-16x9 rounded-top-4 overflow-hidden">
+              <iframe src="https://www.youtube.com/embed/2G9e5FY0C7c" title="Video 8" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-md-6">
+          <img src="hero3.png" class="img-fluid rounded-4 shadow-lg" alt="MOKGOSI SA">
+        </div>
+        <div class="col-md-6">
+          <h2 class="text-gold fw-bold display-5">About MOKGOSI SA</h2>
+          <p class="lead text-muted">Performer & Songwriter from Lesotho</p>
+          <p>Mokgosi SA delivers lyrics with truth and soul. Driven by Basotho culture and the love of fans. Blending Hip Hop and Jazz to tell stories that matter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-5" style="background: var(--mokgosi-gray);">
+    <div class="container text-center">
+      <h2 class="text-gold fw-bold mb-4 display-5">Let's Work Together</h2>
+      <p class="lead mb-4">For shows, collaborations, and bookings</p>
+      <a href="https://wa.me/27769064295?text=Hello%20MOKGOSI%20SA" target="_blank" class="btn btn-success btn-lg px-5">
+        <i class="bi bi-whatsapp"></i> Chat on WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-white text-center py-4">
+    <p class="mb-0">&copy; 2026 MOKGOSI SA. All Rights Reserved. Website by <a href="https://wa.me/27648969111" class="text-gold">INDLOVUWEB</a></p>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/27769064295" class="whatsapp-float" target="_blank">
+      <img src="g.png" alt="WhatsApp">
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Play/Pause Music Player
+    const playButtons = document.querySelectorAll('.play-btn');
+    let currentlyPlaying = null;
+    playButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const audioId = button.getAttribute('data-audio');
+        const audio = document.getElementById(audioId);
+        if (currentlyPlaying && currentlyPlaying !== audio) {
+          currentlyPlaying.pause();
+          currentlyPlaying.currentTime = 0;
+          document.querySelector(`[data-audio="${currentlyPlaying.id}"]`).innerHTML = '<i class="bi bi-play-fill"></i> Play';
+        }
+        if (audio.paused) {
+          audio.play();
+          button.innerHTML = '<i class="bi bi-pause-fill"></i> Pause';
+          currentlyPlaying = audio;
+        } else {
+          audio.pause();
+          button.innerHTML = '<i class="bi bi-play-fill"></i> Play';
+          currentlyPlaying = null;
+        }
+        audio.onended = () => {
+          button.innerHTML = '<i class="bi bi-play-fill"></i> Play';
+          currentlyPlaying = null;
+        };
+      });
+    });
+    
+    
+    
+    
+    fetch('/data/ad.json?v=' + Date.now())
+    .then(res => res.json())
+    .then(ad => {
+    document.getElementById('ad-banner').innerHTML = `
+    <div style="background:${ad.bg}; color:${ad.color}; padding:20px; border-radius:16px;">
+    ${ad.image ? `<img src="${ad.image}" class="img-fluid rounded-3 mb-3" style="max-height:200px; object-fit:cover;">` : ''}
+    <h3 class="fw-bold">${ad.title}</h3>
+    <p class="mb-3">${ad.desc}</p>
+    <a href="${ad.btnLink}" target="_blank" class="btn btn-dark fw-bold px-4">${ad.btnText}</a>
+    </div>
+    `;
+    });
+    
+    
+  </script>
+</body>
+</html>
